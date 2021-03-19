@@ -5,7 +5,7 @@ https://github.com/ipython/ipython/issues/12861
 Remember your job is to make *incremental* progress, break the task into smaller tasks, or finish something in 15 minutes, then pass it along to the next contributor. 
 No responsibility, only fun.
 
-Add your next task to the readme.md. When you're done make a pull request to this repo.
+Add your next task to the readme.md. When you're done add your next task to the top of this readme and make a pull request to this repo.
 
 Email with questions
 
