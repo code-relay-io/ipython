@@ -1,3 +1,14 @@
+# Task # 1
+
+https://github.com/ipython/ipython/issues/12861
+
+Remember your job is to make *incremental* progress, break the task into smaller tasks, or finish something in 15 minutes, then pass it along to the next contributor. 
+No responsibility, only fun.
+
+Add your next task to the readme.md. When you're done make a pull request to this repo.
+
+Email with questions
+
 .. image:: https://codecov.io/github/ipython/ipython/coverage.svg?branch=master
     :target: https://codecov.io/github/ipython/ipython?branch=master
 
