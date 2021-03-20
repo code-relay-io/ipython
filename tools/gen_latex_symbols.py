@@ -54,7 +54,7 @@ def test_ident(i):
 assert test_ident("α")
 assert not test_ident('‴')
 
-valid_idents = [line for line in idents if test_ident(line[1])]
+valid_idents = idents
 
 # Write the `latex_symbols.py` module in the cwd
 
