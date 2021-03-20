@@ -1,3 +1,41 @@
+# Task # 3:
+Continuing efforts towards: https://github.com/ipython/ipython/issues/12861
+
+We already Removed the check that LaTeX commands must be valid Python identifiers.
+This allowed users to input glyphs like the root symbol with \sqrt.
+
+When merged with #Task #1, this creates a new problem: not all commands in
+latex_symbols.jl can be parsed correctly.
+```
+> python3 -m IPython
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 185, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/usr/lib/python3.8/runpy.py", line 144, in _get_module_details
+    return _get_module_details(pkg_main_name, error)
+  File "/usr/lib/python3.8/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/home/david/Downloads/ipython/IPython/__init__.py", line 56, in <module>
+    from .terminal.embed import embed
+  File "/home/david/Downloads/ipython/IPython/terminal/embed.py", line 16, in <module>
+    from IPython.terminal.interactiveshell import TerminalInteractiveShell
+  File "/home/david/Downloads/ipython/IPython/terminal/interactiveshell.py", line 47, in <module>
+    from .debugger import TerminalPdb, Pdb
+  File "/home/david/Downloads/ipython/IPython/terminal/debugger.py", line 7, in <module>
+    from IPython.core.completer import IPCompleter
+  File "/home/david/Downloads/ipython/IPython/core/completer.py", line 133, in <module>
+    from IPython.core.latex_symbols import latex_symbols, reverse_latex_symbol
+  File "/home/david/Downloads/ipython/IPython/core/latex_symbols.py", line 1662
+    "\\scrl" : "\U1d4c1",
+               ^
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 0-6: truncated \UXXXXXXXX escape
+```
+You can type LaTeX Unicode commands as desired if the offending lines
+are deleted from `IPython/core/latex_symbols.py`.
+
+
+
+
 # Task # 1 - https://github.com/ipython/ipython/issues/12861
 
 accidentalrebel: Made a pull request. https://github.com/code-relay-io/ipython/pull/1
