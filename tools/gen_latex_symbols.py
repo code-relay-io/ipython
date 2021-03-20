@@ -35,7 +35,8 @@ idents = []
 for l in lines[symbols_line:]:
     if not '=>' in l: continue # if it's not a def, skip
     if '#' in l: l = l[:l.index('#')] # get rid of eol comments
-    x, y = l.strip().split('=>') 
+    x, y = l.strip().split('=>')
+    if not '"' in x or not '"' in y: continue # if there's no ", skip
     if '*' in x: # if a prefix is present substitute it with its value
         p, x = x.split('*')
         x = prefix_dict[p][:-1] + x[1:]
