@@ -1,6 +1,8 @@
-# Task # 1
+# Task # 1 - https://github.com/ipython/ipython/issues/12861
 
-https://github.com/ipython/ipython/issues/12861
+accidentalrebel: Made a pull request. https://github.com/code-relay-io/ipython/pull/1
+
+# Task # 2 - Double check if newly generated `latex_symbols.py` is complete and are working in IPython.
 
 Remember your job is to make *incremental* progress, break the task into smaller tasks, or finish something in 15 minutes, then pass it along to the next contributor. 
 No responsibility, only fun.
