@@ -4,6 +4,10 @@ accidentalrebel: Made a pull request. https://github.com/code-relay-io/ipython/p
 
 # Task # 2 - Double check if newly generated `latex_symbols.py` is complete and are working in IPython.
 
+# Task # 2
+
+Investigate why tools/gen_latex_symbols.py fails to decode \U1d4c1 mathematical script small l in latex_symbols.jl
+
 Remember your job is to make *incremental* progress, break the task into smaller tasks, or finish something in 15 minutes, then pass it along to the next contributor. 
 No responsibility, only fun.
 
