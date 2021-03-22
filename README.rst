@@ -4,8 +4,10 @@ Continuing efforts towards: https://github.com/ipython/ipython/issues/12861
 We already Removed the check that LaTeX commands must be valid Python identifiers.
 This allowed users to input glyphs like the root symbol with \sqrt.
 
-When merged with #Task #1, this creates a new problem: not all commands in
-latex_symbols.jl can be parsed correctly.
+When merged with #Task #1, this creates a new problem: not all commands in latex_symbols.jl can be parsed correctly.
+
+(Note: On e938d046f3ec81120a86763900a9be86a7dc5f81 on NixOS Linux in a VirtualEnv with no other special setup, the below error could not be reproduced. Why might it only occur intermittently?)
+
 ```
 > python3 -m IPython
 Traceback (most recent call last):
