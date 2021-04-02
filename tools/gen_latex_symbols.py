@@ -73,7 +73,10 @@ s = """# encoding: utf-8
 latex_symbols = {\n
 """
 for line in valid_idents:
-    s += '    "%s" : "%s",\n' % (line[0], line[1])
+    key = line[0]
+    # Fixing unicode issue with capital U
+    value = line[1].replace('\\U', '\\u')
+    s += '    "%s" : "%s",\n' % (key, value)
 s += "}\n"
 
 s += """

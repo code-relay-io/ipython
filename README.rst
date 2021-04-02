@@ -1,3 +1,11 @@
+# Task # 4: 
+
+This problem crops up because when they are loaded with the script `gen_latex_symbols.py`, some of the entries are writted with a capital `\U` rather than the lowercase `\u` that python seems to accept.
+
+This can be fixed manually with a find and replace, but some of them are being rendered incorrectly, e.g. `\scrl` should be mathematical script small l: `𝓁` but instead comes out as `ᵌ1` in GitBash.
+
+I've changed `gen_latex_symbols.py` to run a find/replace on `\U -> \u` in the value part of the string, but the issue with the misrendered symbols still needs to be addressed.
+
 # Task # 3:
 Continuing efforts towards: https://github.com/ipython/ipython/issues/12861
 
