@@ -1,4 +1,7 @@
+
+
 # Task # 4: 
+(continued work to fix https://github.com/ipython/ipython/issues/12861)
 
 This problem crops up because when they are loaded with the script `gen_latex_symbols.py`, some of the entries are writted with a capital `\U` rather than the lowercase `\u` that python seems to accept.
 
